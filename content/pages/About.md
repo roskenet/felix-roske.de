@@ -1,3 +1,6 @@
 Title: About
 
-Willkommen auf meiner Website. Dies ist ein völlig nutzloses Webangebot.
+Ich heiße Felix, komme aus Berlin und veröffentliche hier Dinge, die die Welt nicht braucht.
+
+Ich interessiere mich für Software-Entwicklung, Fotografie und Zeitgeschehen
+
