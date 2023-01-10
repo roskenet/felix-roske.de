@@ -2,7 +2,7 @@ AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
 SITEURL = 'http://localhost:8000'
 
-THEME = '/home/felix/Workspaces/pelican-themes/MinimalXY'
+THEME = './themes/MinimalXY'
 
 PATH = 'content'
 STATIC_PATHS = ['static']
@@ -18,11 +18,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Blogroll
-# LINKS = (('Pelican', 'https://getpelican.com/'),
-#          ('Python.org', 'https://www.python.org/'),
-#          ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-#          ('You can modify those links in your config file', '#'),)
+# MARKDOWN = ['codehilite(css_class=highlight)','extra']
 
 DEFAULT_PAGINATION = 10
 
@@ -49,7 +45,9 @@ AUTHOR_WEB = 'http://felix-roske.de'
 SOCIAL = (
     ('facebook', 'http://www.facebook.com/felix_roske'),
     ('github', 'https://github.com/roskenet'),
+    ('flickr', 'https://www.flickr.com/photos/197338452@N05'),
     ('instagram', 'https://www.instagram.com/roskefelix'),
+    ('pinterest', 'https://www.pinterest.de/felixroske/_created/'),
 )
 
 # Menu
