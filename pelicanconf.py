@@ -51,7 +51,6 @@ SOCIAL = (
 )
 
 # Menu
-# MENUITEMS = (
-#    ('Categories', '/categories.html'),
-#    ('Archive', '/archives.html'),
-# )
+MENUITEMS = (
+   ('Tags', '/tags.html'),
+)
