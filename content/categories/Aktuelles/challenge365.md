@@ -18,6 +18,9 @@ Es gelten folgende Spielregeln:
 
 *As always, should you or any of your IM Force be caught or killed, the Secretary will disavow any knowledge of your actions. This message will self-destruct in ten seconds. Good luck, Felix.*
 
+## [Bild #6/365](https://www.flickr.com/photos/197338452@N05/52656781673/in/album-72177720305495429/)
+Konfuzius sagt: Wenn das Wetter grau ist, trage sonnige Socken!
+
 ## [Bild #3/365](https://www.flickr.com/photos/197338452@N05/52650653818/in/album-72177720305495429/)
 Das Mini-Öko-System in meinem Schlafzimmer.
 
