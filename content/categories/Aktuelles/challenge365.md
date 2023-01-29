@@ -21,6 +21,12 @@ Es gelten folgende Spielregeln:
 ## [Bild #6/365](https://www.flickr.com/photos/197338452@N05/52656781673/in/album-72177720305495429/)
 Konfuzius sagt: Wenn das Wetter grau ist, trage sonnige Socken!
 
+## [Bild #5/365](https://www.flickr.com/photos/197338452@N05/52654681289/in/album-72177720305495429/)
+Ich bin immer wieder überrascht, wie viele Sofortbild-Automaten überall herumstehen. Wozu braucht man so viele Passbilder?
+
+## [Bild #4/365](https://www.flickr.com/photos/197338452@N05/52652548614/in/album-72177720305495429/)
+Zum Gedenktag an die Opfer des Nationalsozialismus suchte ich einen Stolperstein und fand diese 23 vor dem Haus Güntzelstraße 49. Niemand kann behaupten, die Verbrechen der Nationalsozialisten seien im Verborgenen geschehen. Niemand kann behaupten, die restliche Bevölkerung habe davon nichts gewusst.
+
 ## [Bild #3/365](https://www.flickr.com/photos/197338452@N05/52650653818/in/album-72177720305495429/)
 Das Mini-Öko-System in meinem Schlafzimmer.
 
