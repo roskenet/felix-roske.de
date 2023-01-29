@@ -18,6 +18,12 @@ Es gelten folgende Spielregeln:
 
 *As always, should you or any of your IM Force be caught or killed, the Secretary will disavow any knowledge of your actions. This message will self-destruct in ten seconds. Good luck, Felix.*
 
+## [Bild #5/365](https://www.flickr.com/photos/197338452@N05/52654681289/in/album-72177720305495429/)
+Ich bin immer wieder überrascht, wie viele Sofortbild-Automaten überall herumstehen. Wozu braucht man so viele Passbilder?
+
+## [Bild #4/365](https://www.flickr.com/photos/197338452@N05/52652548614/in/album-72177720305495429/)
+Zum Gedenktag an die Opfer des Nationalsozialismus suchte ich einen Stolperstein und fand diese 23 vor dem Haus Güntzelstraße 49. Niemand kann behaupten, die Verbrechen der Nationalsozialisten seien im Verborgenen geschehen. Niemand kann behaupten, die restliche Bevölkerung habe davon nichts gewusst.
+
 ## [Bild #3/365](https://www.flickr.com/photos/197338452@N05/52650653818/in/album-72177720305495429/)
 Das Mini-Öko-System in meinem Schlafzimmer.
 
