@@ -7,12 +7,12 @@ Summary: Warum man immer nur eins von beidem macht...
 Sehr häufig sieht man in Code folgende Konstruktion:
 
 ``` Java
-        try {
-            doSomething(weirdObject);
-        } catch (Exception e) {
-            log.error(e);
-            throw e;
-        }
+try {
+    doSomething(weirdObject);
+} catch (Exception e) {
+    log.error(e);
+    throw e;
+}
 ``` 
 
 Die Intension ist gut gemeint: doSomething wirft irgendeine (checked oder unchecked) Exception, die ich zwar hier nicht behandeln kann aber ich möchte meinem zukünftigen ich oder dem Kollegen, der irgendwann einmal die Logdatei liest, einen Hinweis darauf geben, dass hier etwas passiert ist.
