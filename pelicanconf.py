@@ -11,6 +11,15 @@ TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'de'
 
+# for pelican-material
+#from functools import partial
+#JINJA_FILTERS = {
+#'sort_by_article_count': partial(
+#sorted,
+#key=lambda tags: len(tags[1]),
+#reverse=True)} # reversed for descending order
+# for pelican-material end
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
