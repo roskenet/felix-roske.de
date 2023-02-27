@@ -1,18 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+  {% include 'parts/parallax_header.html' %}
+
   <div class="container">
     <div class="section">
 
       <div class="row">
         <div class="col s12 center">
-          <h1>Dies ist H1</h1>
-          <h2>Dies ist H2</h2>
-          <h3>Dies ist H3</h3>
-          <h4>Dies ist H4</h4>
-          <h5>Dies ist H5</h5>
-          <h6>Dies ist H6</h6>
-          <div id='content-main'>
+          <div class='left-align'>
               {{ article.content }}
           </div>
         </div>
