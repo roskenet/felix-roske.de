@@ -48,7 +48,7 @@ MINIMALXY_CURRENT_YEAR = 2023
 AUTHOR_INTRO = u'Ein Sammelsurium von Vielem.'
 AUTHOR_DESCRIPTION = u'Felix\' Website befasst sich mit Allem und mit Nichts richtig.'
 AUTHOR_AVATAR = '/images/felix.png'
-AUTHOR_WEB = 'http://felix-roske.de'
+AUTHOR_WEB = 'http://www.felix-roske.de'
 
 # Services
 #GOOGLE_ANALYTICS = 'UA-12345678-9'
