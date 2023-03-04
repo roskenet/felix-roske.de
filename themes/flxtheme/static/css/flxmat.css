@@ -2,6 +2,12 @@
     align: left;
 }
 
+.summary {
+    margin: 1.2rem 10% 0 10%;
+    font-size: 1.56rem;
+    font-style: italic;
+}
+
 h1 {
   font-size: 4.2rem;
   line-height: 110%;

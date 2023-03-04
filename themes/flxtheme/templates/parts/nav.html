@@ -1,13 +1,22 @@
 
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">{{ SITENAME }}</a>
+      <a id="logo-container" href="#" class="brand-logo">{{ SITENAME }}</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+            {% for cat, null in categories %}
+            {% if cat != DEFAULT_CATEGORY %}
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" {% if cat == category %}style="font-weight: bold;"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endif %}
+            {% endfor %}
+        {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
+        {% for title, link in MENUITEMS %}
+        <li><a href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>

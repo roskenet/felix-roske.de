@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {% include 'parts/meta_includes.html' %}
+
   <title>{{ SITENAME }}</title>
 
   {% include 'parts/css_includes.html' %}
@@ -13,11 +13,10 @@
 
   {% include 'parts/nav.html' %}
 
-
   {% block content %}{% endblock content %}
 
   {% include 'parts/footer.html' %}
 
   {% include 'parts/script_includes.html' %}
 
-  </body>
+</body>

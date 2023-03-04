@@ -5,11 +5,15 @@ SITEURL = 'http://localhost:8000'
 THEME = './themes/flxtheme'
 
 PATH = 'content'
-STATIC_PATHS = ['static']
+STATIC_PATHS = ['static', 'extras']
 
 TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = 'de'
+
+EXTRA_PATH_METADATA = {
+    'extras/favicon.ico': {'path': 'favicon.ico'},
+}
 
 # for pelican-material
 #from functools import partial
@@ -36,7 +40,7 @@ DEFAULT_PAGINATION = 10
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
-MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_FAVICON = 'static/favicon.ico'
 # MINIMALXY_START_YEAR = 2021
 MINIMALXY_CURRENT_YEAR = 2023
 
@@ -62,4 +66,5 @@ SOCIAL = (
 # Menu
 MENUITEMS = (
    ('Tags', '/tags.html'),
+   ('About', '/pages/about.html'), 
 )

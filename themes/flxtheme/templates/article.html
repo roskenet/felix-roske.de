@@ -2,11 +2,22 @@
 
 {% block content %}
 
-  {% include 'parts/parallax_header.html' %}
+{% include 'parts/parallax_header.html' %}
 
   <div class="container">
     <div class="section">
+      <div class="row valign-wrapper">
+        <div class="summary">
+              <span class="black-text">
+                  <blockquote>
+                  {{ article.summary }}
+                  </blockquote>
+              </span>
+          </div>
+        </div>
+    </div>
 
+    <div class="section">
       <div class="row">
         <div class="col s12 center">
           <div class='left-align'>
