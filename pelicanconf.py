@@ -2,7 +2,7 @@ AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
 SITEURL = 'http://localhost:8000'
 
-THEME = './themes/MinimalXY'
+THEME = './themes/theme'
 
 PATH = 'content'
 STATIC_PATHS = ['static']

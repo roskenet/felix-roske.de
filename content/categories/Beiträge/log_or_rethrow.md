@@ -6,7 +6,7 @@ Summary: Warum man immer nur eins von beidem macht...
 ## Log and rethrow
 Sehr häufig sieht man in Code folgende Konstruktion:
 
-``` Java
+``` java
 try {
     doSomething(weirdObject);
 } catch (Exception e) {
