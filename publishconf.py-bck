@@ -1,8 +1,8 @@
 AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
-SITEURL = 'http://www.felix-roske.de'
+SITEURL = 'http://felix-roske.de'
 
-THEME = './themes/theme'
+THEME = './themes/MinimalXY'
 
 PATH = 'content'
 STATIC_PATHS = ['static']
@@ -17,8 +17,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-# MARKDOWN = ['codehilite(css_class=highlight)','extra']
 
 DEFAULT_PAGINATION = 10
 
@@ -45,7 +43,7 @@ AUTHOR_WEB = 'http://felix-roske.de'
 SOCIAL = (
     ('facebook', 'http://www.facebook.com/felix_roske'),
     ('github', 'https://github.com/roskenet'),
-    ('flickr', 'https://www.flickr.com/photos/197338452@N05'),
+    ('flickr', 'https://www.flickr.com/photos/197338452@N05/'),
     ('instagram', 'https://www.instagram.com/roskefelix'),
     ('pinterest', 'https://www.pinterest.de/felixroske/_created/'),
 )
@@ -53,4 +51,4 @@ SOCIAL = (
 # Menu
 MENUITEMS = (
    ('Tags', '/tags.html'),
-)
+) 
