@@ -52,5 +52,6 @@ SOCIAL = (
 
 # Menu
 MENUITEMS = (
+   ('About', '/pages/about.html'),
    ('Tags', '/tags.html'),
 )
