@@ -1,54 +1,22 @@
-AUTHOR = 'Felix Roske'
-SITENAME = "Felix' Website"
-SITEURL = 'http://felix-roske.de'
+# This file is only used if you use `make publish` or
+# explicitly specify it as your config file.
 
-THEME = './themes/MinimalXY'
+import os
+import sys
 
-PATH = 'content'
-STATIC_PATHS = ['static']
+sys.path.append(os.curdir)
+from pelicanconf import *
 
-TIMEZONE = 'Europe/Berlin'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = "http://www.felix-roske.de"
+RELATIVE_URLS = False
 
-DEFAULT_LANG = 'de'
+FEED_ALL_ATOM = "feeds/all.atom.xml"
+CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+DELETE_OUTPUT_DIRECTORY = True
 
-DEFAULT_PAGINATION = 10
+# Following items are often useful when publishing
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
-# Theme customizations
-MINIMALXY_CUSTOM_CSS = 'static/custom.css'
-MINIMALXY_FAVICON = 'favicon.ico'
-# MINIMALXY_START_YEAR = 2021
-MINIMALXY_CURRENT_YEAR = 2023
-
-# Author
-AUTHOR_INTRO = u'Ein Sammelsurium von Vielem.'
-AUTHOR_DESCRIPTION = u'Felix\' Website befasst sich mit Allem und mit Nichts richtig.'
-AUTHOR_AVATAR = '/images/felix.png'
-AUTHOR_WEB = 'http://felix-roske.de'
-
-# Services
-#GOOGLE_ANALYTICS = 'UA-12345678-9'
-#DISQUS_SITENAME = 'johndoe'
-
-# Social
-SOCIAL = (
-    ('facebook', 'http://www.facebook.com/felix_roske'),
-    ('github', 'https://github.com/roskenet'),
-    ('flickr', 'https://www.flickr.com/photos/197338452@N05/'),
-    ('instagram', 'https://www.instagram.com/roskefelix'),
-    ('pinterest', 'https://www.pinterest.de/felixroske/_created/'),
-)
-
-# Menu
-MENUITEMS = (
-   ('Tags', '/tags.html'),
-) 
+# DISQUS_SITENAME = ""
+# GOOGLE_ANALYTICS = ""

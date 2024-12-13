@@ -1,11 +1,11 @@
 AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
-SITEURL = 'http://localhost:8000'
+SITEURL = ""
 
-THEME = './themes/MinimalXY'
+PATH = "content"
 
-PATH = 'content'
-STATIC_PATHS = ['static']
+# THEME = "./themes/materialistic"
+THEME = "./themes/material"
 
 TIMEZONE = 'Europe/Berlin'
 
@@ -18,39 +18,28 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# MARKDOWN = ['codehilite(css_class=highlight)','extra']
+# Blogroll
+LINKS = (
+    ("Pelican", "https://getpelican.com/"),
+    ("Python.org", "https://www.python.org/"),
+    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
+    ("You can modify those links in your config file", "#"),
+)
+
+# Social widget
+SOCIAL = (
+    ("You can add links in your config file", "#"),
+    ("Another social link", "#"),
+)
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
-# Theme customizations
-MINIMALXY_CUSTOM_CSS = 'static/custom.css'
-MINIMALXY_FAVICON = 'favicon.ico'
-# MINIMALXY_START_YEAR = 2021
-MINIMALXY_CURRENT_YEAR = 2023
-
-# Author
-AUTHOR_INTRO = u'Ein Sammelsurium von Vielem.'
-AUTHOR_DESCRIPTION = u'Felix\' Website befasst sich mit Allem und mit Nichts richtig.'
-AUTHOR_AVATAR = '/images/felix.png'
-AUTHOR_WEB = 'http://felix-roske.de'
-
-# Services
-#GOOGLE_ANALYTICS = 'UA-12345678-9'
-#DISQUS_SITENAME = 'johndoe'
-
-# Social
-SOCIAL = (
-    ('facebook', 'http://www.facebook.com/felix_roske'),
-    ('github', 'https://github.com/roskenet'),
-    ('flickr', 'https://www.flickr.com/photos/197338452@N05'),
-    ('instagram', 'https://www.instagram.com/roskefelix'),
-    ('pinterest', 'https://www.pinterest.de/felixroske/_created/'),
-)
-
-# Menu
-MENUITEMS = (
-   ('Tags', '/tags.html'),
-)
+from functools import partial
+JINJA_FILTERS = {
+    'sort_by_article_count': partial(
+        sorted,
+        key=lambda tags: len(tags[1]),
+        reverse=True)} # reversed for descending order

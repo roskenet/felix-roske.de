@@ -66,6 +66,9 @@
             <a href="http://twitter.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}&amp;text={{ (SITENAME + ': ' + article.title)|urlencode }}" target="_blank" class="w3-btn w3-blue">
               <i class="fa fa-twitter"></i> <span>Twitter</span>
             </a>
+            <a href="https://plus.google.com/share?url={{ (SITEURL + '/' + article.url)|urlencode }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
           </div>
 
           <br><br><br>
