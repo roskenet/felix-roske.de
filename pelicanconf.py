@@ -4,8 +4,7 @@ SITEURL = ""
 
 PATH = "content"
 
-# THEME = "./themes/materialistic"
-THEME = "./themes/material"
+THEME = "./theme"
 
 TIMEZONE = 'Europe/Berlin'
 
