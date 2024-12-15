@@ -32,36 +32,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         {% endblock head %}
     </head>
 
     <body>
         <header>
+            <ul id="dropdown" class="dropdown-content">
+                {% if DISPLAY_CATEGORIES_ON_MENU %}
+                {% for cat, null in categories %}
+                <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                {% endfor %}
+                {% endif %}
+            </ul>
             <nav class="blue-grey darken-3" role="navigation">
                 <div class="nav-wrapper container">
-                    <a href="{{SITEURL}}" class="brand-logo">{{SITENAME}}</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Bereiche</a></li>
-                        <li><a href="{{SITEURL}}/pages/about.html">Info</a></li>
-                    </ul>
-                    <ul id="dropdown" class="dropdown-content">
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                        <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                        {% endfor %}
-                        {% endif %}
-                    </ul>
-                    <a href="#" data-target="mobile-nav" class="button-collapse"><i class="material-icons">arrow_drop_down</i></a>
-                    <ul id="mobile-nav" class="sidenav">
-                        {% if DISPLAY_CATEGORIES_ON_MENU %}
-                        {% for cat, null in categories %}
-                        <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-                        {% endfor %}
-                        {% endif %}
-                        <li><a href="{{SITEURL}}/pages/about.html">Info</a></li>
-<!--                        <li><a href="{{SITEURL}}/archives.html">Archives</a></li>-->
-                    </ul>
+                        <a href="{{SITEURL}}" class="brand-logo hide-on-med-and-down">{{SITENAME}}</a>
+                        <ul class="right">
+                            <li><a class="dropdown-trigger" href="#!" data-target="dropdown">Bereiche</a></li>
+                            <li><a href="{{SITEURL}}/pages/about.html">Info</a></li>
+                        </ul>
                 </div>
             </nav>
             <div id="index-banner" class="parallax-container">
