@@ -50,7 +50,7 @@
                         {% for cat, null in categories %}
                         <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                         {% endfor %}
-        {% endif %}
+                        {% endif %}
                     </ul>
                     <a href="#" data-target="mobile-nav" class="button-collapse"><i class="material-icons">arrow_drop_down</i></a>
                     <ul id="mobile-nav" class="sidenav">
@@ -59,7 +59,8 @@
                         <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                         {% endfor %}
                         {% endif %}
-                        <li><a href="{{SITEURL}}/archives.html">Archives</a></li>
+                        <li><a href="{{SITEURL}}/pages/about.html">Info</a></li>
+<!--                        <li><a href="{{SITEURL}}/archives.html">Archives</a></li>-->
                     </ul>
                 </div>
             </nav>
