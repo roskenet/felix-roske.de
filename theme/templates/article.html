@@ -41,18 +41,18 @@
     <div class="divider"></div>
     <div class="row article-details">
         <div class="col m4 s12">
-            <i class="material-icons tiny" title="Erstellt am">access_time</i> <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated">{{article.locale_date}}</time>
+            <i class="material-icons tiny" title="Erstellt am">access_time</i> <time datetime="{{article.date.strftime('%Y-%m-%d')}}" itemprop="dateCreated"> {{article.locale_date}}</time>
             {% if article.modified %}
             <br/>
             <i class="material-icons" title="Zuletzt geändert am">edit</i> <time datetime="{{article.modified.strftime('%Y-%m-%d')}}" itemprop="dateModified">{{article.locale_modified}}</time>
             {% endif %}
         </div>
         <div class="col m2 s12">
-            <i class="mdi-action-list" title="Bereich"> <a href="{{SITEURL}}/{{article.category.url}}">{{article.category}}</a></i>
+             <a class="teal-text" href="{{SITEURL}}/{{article.category.url}}"><i class="material-icons tiny" title="Bereich">list</i> {{article.category}}</a>
         </div>
         <div class="right-align col m6 s12">
             {% for tag in article.tags %}
-            <a href="{{SITEURL}}/{{tag.url}}"><i class="material-icons tiny">tag</i>{{tag}}</a>
+            <a class="teal-text" href="{{SITEURL}}/{{tag.url}}"><i class="material-icons tiny">tag</i>{{tag}}</a>
             {% endfor %}
         </div>
     </div>

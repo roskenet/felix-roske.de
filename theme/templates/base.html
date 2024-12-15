@@ -30,7 +30,6 @@
         <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
         {% endif %}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<!--        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/materialize/dist/css/materialize.min.css">-->
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygment.css">
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -53,7 +52,7 @@
                         {% endfor %}
                         {% endif %}
                     </ul>
-                    <a href="#" data-target="mobile-nav" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <a href="#" data-target="mobile-nav" class="button-collapse"><i class="material-icons">arrow_drop_down</i></a>
                     <ul id="mobile-nav" class="sidenav">
                         {% if DISPLAY_CATEGORIES_ON_MENU %}
                         {% for cat, null in categories %}
@@ -80,7 +79,6 @@
             </div>
         </header>
 
-
         <main>
         <div class="container">
             {% block content %}
@@ -92,7 +90,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col l2 s12">
-                    <img src="/images/felix.png">
+                    <img src="/theme/images/info_image.png">
                     </div>
                     <div class="col l7 s12">
                         <h5 class="grey-text">Info</h5>
@@ -112,15 +110,13 @@
             </div>
             <div class="footer-copyright">
                 <div class="container center grey-text text-darken-2">
-                    (c) by Felix Roske &lt;felix@roskenet.de&gt; - CC-BY-NC-SA
+                    © and <i class="material-icons tiny">favorite_border</i> Felix Roske &lt;felix@roskenet.de&gt;  CC-BY-NC-SA
                 </div>
             </div>
         </footer>
 
         {% block body_end %}
-<!--        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/jquery/dist/jquery.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<!--        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/bower_components/materialize/dist/js/materialize.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/init.js"></script>
         {% endblock body_end %}

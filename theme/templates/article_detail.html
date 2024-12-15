@@ -1,14 +1,14 @@
 <div class="row">
     <div class="card">
         <div class="card-content">
-            <h3><a class="orange-text" href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h3>
+            <h4><a class="orange-text" href="{{SITEURL}}/{{article.url}}">{{article.title}}</a></h4>
             <div>{{article.summary}}</div>
         </div>
         <div class="card-action">
-            <a href="{{SITEURL}}/{{article.url}}">Lesen</a>
+            <a class="teal-text" href="{{SITEURL}}/{{article.url}}">Lesen</a>
             <span class="right">
                 {% for tag in article.tags %}
-                <a href="{{SITEURL}}/{{tag.url}}"><i class="material-icons tiny">tag</i>{{tag}}</a>
+                <a class="teal-text" href="{{SITEURL}}/{{tag.url}}"><i class="material-icons tiny">tag</i>{{tag}}</a>
             {% endfor %}
             </span>
         </div>

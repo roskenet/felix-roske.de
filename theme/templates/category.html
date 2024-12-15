@@ -5,7 +5,7 @@
 <div class="section no-pad-bot">
     <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Bereich: {{ category }}</h1>
+        <h1 class="header center teal-text text-lighten-2"><i class="material-icons medium">list</i> {{ category }}</h1>
 <!--        <div class="row center">-->
 <!--            <h5 class="header col s12 teal-text text-lighten-5">... auf meiner Homepage</h5>-->
 <!--        </div>-->
@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<h3>Die letzen Artikel im Bereich {{ category }}:</h3>
+<h3>Die letzen Artikel im Bereich "{{ category }}":</h3>
 {% for article in articles_page.object_list %}
 {% include "article_detail.html" %}
 {% endfor %}
