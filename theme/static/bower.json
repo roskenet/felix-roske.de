@@ -8,6 +8,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "materialize": "~0.100.2"
+    "materialize": "~1.0.0"
   }
 }

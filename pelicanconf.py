@@ -1,5 +1,6 @@
 AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
+SITESUBTITLE = "Nichts Wichtiges"
 SITEURL = ""
 
 PATH = "content"

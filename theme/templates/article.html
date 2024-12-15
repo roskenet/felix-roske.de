@@ -22,21 +22,15 @@
         <br><br>
         <h1 class="header center teal-text text-lighten-2">{{article.title}}</h1>
         <div class="row center">
-            <h5 class="header col s12 light">{{article.summary}}</h5>
+            <h5 class="header col s12 teal-text text-lighten-5">{{article.summary}}</h5>
         </div>
     </div>
 </div>
-<div class="parallax"><img src="/images/background1.jpg" alt="Unsplashed background img 1"></div>
+<div class="parallax"><img src="/images/airport1.jpg" alt="Unsplashed background img 1"></div>
 {% endblock %}
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/Article">
-<!--    <h1 itemprop="name"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"-->
-<!--                                                  class="teal-text"-->
-<!--                                                  title="Permalink vers {{ article.title|striptags }}">-->
-<!--            {{ article.title }}-->
-<!--        </a>-->
-<!--    </h1>-->
     <div class="flow-text section" itemprop="text">
         {{ article.content }}
     </div>
