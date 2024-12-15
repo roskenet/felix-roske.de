@@ -2,7 +2,7 @@ Title: About
 
 Ich heiße Felix, komme aus Berlin und veröffentliche hier Dinge, die die Welt nicht braucht.
 
-![Portrait]({static}/images/portrait400x400.jpg)
+![Portrait](/static/images/portrait400x400.jpg)
 
 Ich interessiere mich für Software-Entwicklung, Fotografie und Zeitgeschehen.
 

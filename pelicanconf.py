@@ -6,6 +6,7 @@ ABOUT = "Meine völlig sinnlose Seite auf der ich meine Gedanken ordne."
 DEFAULT_IMAGE = "airport1.jpg"
 
 PATH = "content"
+STATIC_PATHS = ['static']
 
 THEME = "./theme"
 
@@ -19,14 +20,6 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
-# Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
 
 # Social widget
 SOCIAL = (
