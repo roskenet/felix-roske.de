@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}{{SITENAME}} - Articles taggés {{tag}}{% endblock %}
+{% block title %}{{SITENAME}} - Tag: {{tag}}{% endblock %}
+
+{% block parallaxheader %}
+<div class="section no-pad-bot">
+        <div class="container">
+                <br><br>
+                <h1 class="header center teal-text text-lighten-2">Tag: {{ tag }}</h1>
+                <!--        <div class="row center">-->
+                <!--            <h5 class="header col s12 teal-text text-lighten-5">... auf meiner Homepage</h5>-->
+                <!--        </div>-->
+        </div>
+</div>
+<div class="parallax"><img src="/images/airport2.jpg" alt="Unsplashed background img 1"></div>
+{% endblock %}
 
 {% block content %}
-<h2 class="orange-text">Articles taggés "{{ tag }}"</h2>
+<h3>Artikel mit dem Tag "{{ tag }}":</h3>
 <div class="row">
         {% for article in articles %}
         {% include "article_detail.html" %}
