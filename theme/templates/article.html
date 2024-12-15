@@ -26,12 +26,16 @@
         </div>
     </div>
 </div>
-<div class="parallax"><img src="/images/airport1.jpg" alt="Unsplashed background img 1"></div>
+{% if article.image %}
+<div class="parallax"><img src="/images/{{article.image}}" alt="Unsplashed background img 1"></div>
+{% else %}
+<div class="parallax"><img src="/images/{{DEFAULT_IMAGE}}" alt="Unsplashed background img 1"></div>
+{% endif %}
 {% endblock %}
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/Article">
-    <div class="flow-text section" itemprop="text">
+    <div class="section" itemprop="text">
         {{ article.content }}
     </div>
     <div class="divider"></div>

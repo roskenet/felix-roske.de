@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h4>...auf meiner Homepage. Die neuesten Beiträge:</h4>
+<br>
+
 {% for article in articles_page.object_list %}
 {% include "article_detail.html" %}
 {% endfor %}
 {% include "pagination.html" %}
+
 {% endblock %}

@@ -1,7 +1,9 @@
 AUTHOR = 'Felix Roske'
 SITENAME = "Felix' Website"
 SITESUBTITLE = "Nichts Wichtiges"
-SITEURL = ""
+SITEURL = "http://localhost:8000"
+ABOUT = "Meine völlig sinnlose Seite auf der ich meine Gedanken ordne."
+DEFAULT_IMAGE = "airport1.jpg"
 
 PATH = "content"
 
@@ -28,8 +30,11 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ('facebook', 'http://www.facebook.com/felix_roske'),
+    ('github', 'https://github.com/roskenet'),
+    ('flickr', 'https://www.flickr.com/photos/197338452@N05'),
+    ('instagram', 'https://www.instagram.com/roskefelix'),
+    ('pinterest', 'https://www.pinterest.de/felixroske/_created/'),
 )
 
 DEFAULT_PAGINATION = 5
