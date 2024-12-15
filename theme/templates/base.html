@@ -50,7 +50,7 @@
                         {% for cat, null in categories %}
                         <li{% if cat == category %} class="active"{% endif %}><a class="truncate" href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                         {% endfor %}
-                        {% endif %}
+        {% endif %}
                     </ul>
                     <a href="#" data-target="mobile-nav" class="button-collapse"><i class="material-icons">arrow_drop_down</i></a>
                     <ul id="mobile-nav" class="sidenav">
@@ -68,14 +68,18 @@
                 <div class="section no-pad-bot">
                     <div class="container">
                         <br><br>
+                        {% block headertitle %}
                         <h1 class="header center teal-text text-darken-3">Willkommen...</h1>
+                        {% endblock headertitle %}
+                        {% block headersubtitle %}
 <!--                        <div class="row center">-->
 <!--                            <h5 class="header col s12 teal-text text-lighten-5">... auf meiner Homepage!</h5>-->
 <!--                        </div>-->
+                        {% endblock headersubtitle %}
                     </div>
                 </div>
                 <div class="parallax"><img src="/theme/images/header_image.jpg" alt="Unsplashed background img 1"></div>
-                {% endblock %}
+                {% endblock parallaxheader %}
             </div>
         </header>
 

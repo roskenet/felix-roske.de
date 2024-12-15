@@ -8,7 +8,7 @@
             {% else %}
             <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
             {% endif %}
-            <li class="diabled">{{articles_page.number}}/{{articles_paginator.num_pages}}</li>
+            <li class="disabled">{{articles_page.number}}/{{articles_paginator.num_pages}}</li>
             {% if articles_page.has_next() %}
             <li class="waves-effect"><a href="{{SITEURL}}/{{articles_next_page.url}}"><i class="material-icons">chevron_right</i></a></li>
             {% else %}

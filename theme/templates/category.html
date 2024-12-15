@@ -11,11 +11,17 @@
 <!--        </div>-->
     </div>
 </div>
-<div class="parallax"><img src="/images/airport2.jpg" alt="Unsplashed background img 1"></div>
+<div class="parallax"><img src="/images/airport2.jpg" alt="Unsplashed background img"></div>
 {% endblock %}
 
 {% block content %}
-<h3>Die letzen Artikel im Bereich "{{ category }}":</h3>
+{%if category == "Playground" %}
+    <h3>Playground</h3>
+    <p>Der Playground ist zum Ausprobieren der Jinja Template Engine da.</p>
+{% else %}
+    <h3>Die letzen Artikel im Bereich "{{ category }}":</h3>
+{% endif %}
+</br>
 {% for article in articles_page.object_list %}
 {% include "article_detail.html" %}
 {% endfor %}
