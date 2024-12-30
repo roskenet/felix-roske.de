@@ -1,7 +1,7 @@
 Title: Log oder Rethrow - niemals beides!
 Date: 2023-01-26 19:22
-Tags: Exception-Handling, Programmierung, Software
-Summary: Warum man immer nur eins von beidem macht...
+Tags: Exceptions, Programmierung, Software
+Summary: Warum man immer nur eins von beidem macht
 
 ## Log and rethrow
 Sehr häufig sieht man in Code folgende Konstruktion:
