@@ -10,7 +10,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1" # Für ACM-Zertifikate für CloudFront **muss** es us-east-1 sein
+  region = "us-east-1" # ACM certificates for CloudFront must be in us-east-1
 }
 
 provider "aws" {
@@ -19,14 +19,12 @@ provider "aws" {
 }
 
 # 1. Route53 Zone Lookup
-
 data "aws_route53_zone" "selected" {
   name         = var.root_domain
   private_zone = false
 }
 
-# 2. ACM-Zertifikat (in us-east-1!)
-
+# 2. ACM Certificate (in us-east-1!)
 resource "aws_acm_certificate" "cert" {
   domain_name       = var.domain_name
   validation_method = "DNS"
@@ -40,7 +38,7 @@ resource "aws_acm_certificate" "cert" {
   }
 }
 
-# 3. DNS-Validierungseintrag
+# 3. DNS Validation Record
 resource "aws_route53_record" "cert_validation" {
   for_each = {
     for dvo in aws_acm_certificate.cert.domain_validation_options : dvo.domain_name => {
@@ -57,7 +55,7 @@ resource "aws_route53_record" "cert_validation" {
   ttl     = 300
 }
 
-# 4. Validierung durchführen
+# 4. Validate the Certificate
 resource "aws_acm_certificate_validation" "cert_validated" {
   certificate_arn         = aws_acm_certificate.cert.arn
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
@@ -92,7 +90,7 @@ resource "aws_s3_bucket_public_access_block" "website" {
   restrict_public_buckets = false
 }
 
-# 6. S3 Bucket Policy (CloudFront Zugriff erlauben)
+# 6. S3 Bucket Policy (Allow CloudFront Access)
 resource "aws_s3_bucket_policy" "website_policy" {
   provider = aws.default
   bucket   = aws_s3_bucket.website.id
@@ -120,7 +118,6 @@ resource "aws_s3_bucket_policy" "website_policy" {
 }
 
 # 7. CloudFront
-
 data "aws_caller_identity" "current" {}
 
 resource "aws_cloudfront_origin_access_control" "oac" {
@@ -176,7 +173,7 @@ resource "aws_cloudfront_distribution" "website" {
   aliases = [var.domain_name]
 }
 
-# 8. DNS-Eintrag für www.felix-roske.de
+# 8. DNS Record for www.felix-roske.de
 resource "aws_route53_record" "www" {
   zone_id = data.aws_route53_zone.selected.zone_id
   name    = var.domain_name
@@ -188,4 +185,3 @@ resource "aws_route53_record" "www" {
     evaluate_target_health = false
   }
 }
-
