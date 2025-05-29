@@ -47,18 +47,32 @@ resource "aws_acm_certificate_validation" "cert_validation" {
   validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
 }
 
+resource "aws_kms_key" "apprunner_key" {
+  description             = "KMS key for AppRunner service encryption"
+  deletion_window_in_days = 7
+}
+
+resource "aws_apprunner_auto_scaling_configuration_version" "apprunner_auto_scaling" {
+  auto_scaling_configuration_name = "polonium-auto-scaling"
+
+  max_concurrency = 100
+  max_size        = 5
+  min_size        = 1
+}
+
 resource "aws_apprunner_service" "service" {
   service_name = "polonium-service"
 
-  source_configuration {
-    image_repository {
-      image_identifier      = "roskenet/polonium:latest"
-      image_repository_type = "DOCKERHUB"
-      image_configuration {
-        port = "8080"
-      }
+source_configuration {
+  auto_deployments_enabled = false
+  image_repository {
+    image_identifier      = "public.ecr.aws/m9p5w9v9/roskenet/polonium:latest"
+    image_repository_type = "ECR_PUBLIC"
+    image_configuration {
+      port = "8080"
     }
   }
+}
 
   instance_configuration {
     cpu    = "1024"
@@ -66,16 +80,16 @@ resource "aws_apprunner_service" "service" {
   }
 
   encryption_configuration {
-    enable_at_rest = true
+    kms_key = aws_kms_key.apprunner_key.arn
   }
 
-  auto_scaling_configuration_arn = "arn:aws:apprunner:eu-central-1:aws:auto-scaling-configuration/default/1"
+  auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.apprunner_auto_scaling.arn
 }
 
 resource "aws_apprunner_custom_domain_association" "custom_domain" {
-  service_arn    = aws_apprunner_service.service.arn
-  domain_name    = "www.felixroske.de"
-  certificate_arn = aws_acm_certificate_validation.cert_validation.certificate_arn
+  service_arn          = aws_apprunner_service.service.arn
+  domain_name          = "www.felixroske.de"
+  enable_www_subdomain = false
 }
 
 resource "aws_route53_record" "www" {
@@ -85,4 +99,3 @@ resource "aws_route53_record" "www" {
   ttl     = 300
   records = [aws_apprunner_service.service.service_url]
 }
-
