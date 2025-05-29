@@ -8,7 +8,7 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-S3_BUCKET=felix-roske.de
+S3_BUCKET=www.felix-roske.de
 
 
 DEBUG ?= 0
@@ -72,7 +72,7 @@ publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
 s3_upload: publish
-	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --acl public-read --delete
+	aws s3 sync "$(OUTPUTDIR)"/ s3://$(S3_BUCKET) --delete
 
 
 .PHONY: html help clean regenerate serve serve-global devserver devserver-global publish s3_upload

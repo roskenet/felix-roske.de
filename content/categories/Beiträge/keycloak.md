@@ -1,5 +1,7 @@
 Title: Keycloak
 Date: 17.11.2024 00:58
+Tags: Keycloak, Java, Security
+Summary: Microservices mit Keycloak sichern
 
 ## Service 2 Service Authentication
 

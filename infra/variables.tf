@@ -8,3 +8,7 @@ variable "root_domain" {
   type        = string
 }
 
+variable "region" {
+  description = "Die AWS region"
+  type        = string
+}
