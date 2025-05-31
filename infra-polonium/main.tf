@@ -86,12 +86,6 @@ source_configuration {
   auto_scaling_configuration_arn = aws_apprunner_auto_scaling_configuration_version.apprunner_auto_scaling.arn
 }
 
-resource "aws_apprunner_custom_domain_association" "custom_domain" {
-  service_arn          = aws_apprunner_service.service.arn
-  domain_name          = "www.felixroske.de"
-  enable_www_subdomain = false
-}
-
 resource "aws_route53_record" "www" {
   zone_id = data.aws_route53_zone.main.zone_id
   name    = "www.felixroske.de"
