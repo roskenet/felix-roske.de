@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-central-1"  # anpassen, falls nötig
+  region = "eu-central-1"  
 }
 
 data "aws_route53_zone" "main" {
