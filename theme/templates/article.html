@@ -27,7 +27,11 @@
     </div>
 </div>
 {% if article.image %}
-<div class="parallax"><img src="/static/images/{{article.image}}" alt="Unsplashed background img"></div>
+  {% if article.image.startswith('https') %}
+    <div class="parallax"><img src="{{article.image}}" alt="Unsplashed background img"></div>
+  {% else %}
+    <div class="parallax"><img src="/static/images/{{article.image}}" alt="Unsplashed background img"></div>
+  {% endif %}
 {% else %}
 <div class="parallax"><img src="/static/images/{{DEFAULT_IMAGE}}" alt="Unsplashed background img"></div>
 {% endif %}

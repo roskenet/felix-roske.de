@@ -41,10 +41,6 @@ article h3 {
     color: #ff9800;
 }
 
-article h4 {
-    text-align: left;
-}
-
 article ul li {
     list-style-type: square;
     margin-left: 2rem;
@@ -61,5 +57,9 @@ article ul li {
 
 .highlight, .highlighttable {
     line-height: 1.1em;
+}
+
+.card-content h4 a.orange-text {
+    font-size: 1.5rem;
 }
 
