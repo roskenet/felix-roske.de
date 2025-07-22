@@ -16,6 +16,8 @@ RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
 
+PYGMENTS_STYLE = 'monokai'  # 'monokai' oder 'default', 'friendly', 'colorful', etc.
+
 # Following items are often useful when publishing
 
 # DISQUS_SITENAME = ""

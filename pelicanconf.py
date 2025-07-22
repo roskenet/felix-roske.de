@@ -36,6 +36,8 @@ TYPOGRIFY = True
 
 DEFAULT_DATE_FORMAT = '%a %d %B %Y'
 
+PYGMENTS_STYLE = 'colorful'  # 'monokai' oder 'default', 'friendly', 'colorful', etc.
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
