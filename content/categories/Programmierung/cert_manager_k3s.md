@@ -2,10 +2,12 @@ Title: Let’s Encrypt mit cert-manager auf k3s
 Date: 2025-07-14
 Tags: Certificates, HTTPS, CertManager
 Summary: Warum pathType: Exact dein HTTPS blockiert (und wie du es fixt)
+Image: https://static.felix-roske.de/img/petunia_002.jpg
 
 ## Frustration 
 
-Schon häufiger habe ich Webservices mit Let's Encrypt und dem cert-manager abgesichert. Also ging ich davon aus, dass das auch mit meinem neuesten Testprojekt kein Hexenwerk sein sollte.
+Schon häufiger habe ich Webservices mit Let's Encrypt und dem cert-manager abgesichert. 
+Also ging ich davon aus, dass das auch mit meinem neuesten Testprojekt kein Hexenwerk sein sollte.
 
 Pustekuchen! 
 
@@ -14,7 +16,7 @@ Die Installation des nginx (ohne den Standard traefik) und des cert-managers per
 
 Doch aus einem verflixten Grund konnte die http01 Challenge nicht erfolgreich ausgeführt werden.
 
-```
+```log
 admission webhook "validate.nginx.ingress.kubernetes.io" denied the request:
 ingress contains invalid paths: path /.well-known/acme-challenge/... cannot be used with pathType Exact
 ```
@@ -25,7 +27,7 @@ Hmm... ok. Nach ein wenig Suchen ist klar: Der Punkt in .well-known scheint das 
 
 Dazu muss man sich erstmal klarmachen, dass es sich nicht um das Routing für die Domain handelt, die wir gerade deployen wollen:
 
-```
+```yaml
 spec:
   ingressClassName: nginx
   tls:
@@ -46,7 +48,7 @@ Nach längerem Nachdenken wird dann klar, dass es sich um die Einstellung im cer
 
 Also probiert man Folgendes:
 
-```
+```yaml
     solvers:
     - http01:
         ingress:
@@ -61,7 +63,7 @@ Also probiert man Folgendes:
 
 Dieses yaml deployed allerdings nicht, weil http01 diese Einstellung nicht kennt und man bekommt nach `kubectl apply` den Fehler:
 
-```
+```log
 strict decoding error: unknown field "spec.acme.solvers[0].http01.ingress.pathType"
 ```
 
@@ -87,7 +89,7 @@ Am einfachsten setzt man diesen in einem values.yaml wenn man das helm Chart fü
 
 Also:
 
-```
+```yaml
 config:
   featureGates:
     ACMEHTTP01IngressPathTypeExact: false
@@ -95,7 +97,7 @@ config:
 
 Nun mit diesen values neu deployen (am besten das helm chart vorher komplett entfernen und dann neu anwenden:
 
-```
+```shell
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --set installCRDs=false \
@@ -112,8 +114,8 @@ Juhu.
 
 ## Fazit & Lessons Learned
 
-* cert-manager ist mächtig, aber... ruppig
-* Ingress-Bugs wie dieser sollten besser dokumentiert sein
-* Eine eigene values.yaml ist dein bester Freund
-* Und: Verliere nie die Nerven. Du bist nicht allein!
+    * cert-manager ist mächtig, aber... ruppig
+    * Ingress-Bugs wie dieser sollten besser dokumentiert sein
+    * Eine eigene values.yaml ist dein bester Freund
+    * Und: Verliere nie die Nerven. Du bist nicht allein!
 
