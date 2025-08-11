@@ -2,6 +2,7 @@ Title: Performance der JVM
 Date: 2024-12-16
 Tags: Kotlin, JVM, Performance
 Summary: Das Märchen der schlechten Performance der JVM
+Image: https://static.felix-roske.de/img/petunia_003.jpg
 
 ## Hartnäckige Vorurteile zur Laufzeit
 
