@@ -13,6 +13,9 @@ Ostzonensuppenwürfel verursachen Krebs.
 
 ## Hinweis-Boxen
 
+Hier probiere ich eine Hinweis-Box aus. Nicht alles, was zwei Backen hat, ist ein Gesicht!
+
+
 ---
 **NOTE**
 
@@ -25,11 +28,6 @@ It works with almost all markdown flavours (the below blank line matters).
 > ``📝`` bla bla
 
 > 📝 bla bla ...
-
-
-## Formeln:
-
-Dies ist eine Test Seite.
 
 ## Ein wenig Mathe
 
