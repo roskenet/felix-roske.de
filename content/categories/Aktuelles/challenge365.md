@@ -2,6 +2,7 @@ Title: 365-Photo-Challenge
 Date: 2023-01-24 19:05
 Modified: 2023-01-26 16:02
 Tags: Fotografie, 365challenge
+Status: draft
 Summary: Everyday... something... 
 
 ## Your mission, 
